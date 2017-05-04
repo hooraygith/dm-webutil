@@ -1,0 +1,36 @@
+{
+  "name": "dm-webutil",
+  "version": "0.1.0",
+  "description": "点米.前端.便捷工具库",
+  "main": "dist/dmUtil.js",
+  "keywords": [
+    "dm",
+    "vue",
+    "components"
+  ],
+  "scripts": {
+    "preversion": "yarn run update && yarn run tag:fetch",
+    "version": "yarn run build && git add -A",
+    "postversion": "yarn run tag:push",
+    "build": "yarn run build:dev",
+    "build:dev": "node build/compile.js dev",
+    "postbuild:dev": "node build/compile-post.js",
+    "update": "yarn config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/ && yarn upgrade --ignore-engines --registry=https://registry.npm.taobao.org",
+    "tag:clear": "node build/tag-clear.js",
+    "tag:push": "node build/tag-push.js",
+    "tag:fetch": "node build/tag-fetch.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "dm-fe-dll": "latest"
+  },
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  }
+}

@@ -1,0 +1,7 @@
+#忽略.idea文件夹的内容#
+
+.idea/
+.svn/
+target/
+node_modules/
+*.log

@@ -17,7 +17,7 @@
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
 
-/*global unescape, define, module */
+/* global unescape, define, module */
 
 ;(function ($) {
   'use strict'

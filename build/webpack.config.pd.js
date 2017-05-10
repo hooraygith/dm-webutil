@@ -15,7 +15,7 @@ module.exports = {
         dmUtil: ['./src/index.js']
     },
     output: {
-        path: path.resolve('dist/dev'),
+        path: path.resolve('dist/pd'),
         filename: '[name].js',
         library: '[name]',
         libraryTarget: 'umd',
@@ -36,7 +36,7 @@ module.exports = {
             clear: true,
             width: 60
         }),
-        new Clean(['dist/dev'], {
+        new Clean(['dist/pd'], {
             root: process.cwd()
         }),
         /* 跟业务代码一样，该兼容的还是得兼容 */

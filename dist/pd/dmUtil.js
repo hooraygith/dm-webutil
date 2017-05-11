@@ -764,7 +764,7 @@ setSession:_session.setSession,getSession:_session.getSession,removeSession:_ses
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*
+/* eslint-disable *//*
  CryptoJS v3.1.2
  code.google.com/p/crypto-js
  (c) 2009-2013 by Jeff Mott. All rights reserved.
@@ -776,7 +776,7 @@ setSession:_session.setSession,getSession:_session.getSession,removeSession:_ses
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*
+/* eslint-disable *//*
  CryptoJS v3.0.2
  code.google.com/p/crypto-js
  (c) 2009-2012 by Jeff Mott. All rights reserved.
@@ -821,11 +821,11 @@ Object.defineProperty(exports,"__esModule",{value:true});exports.delCookie=expor
 var exp=new Date();exp.setTime(exp.getTime()+day*24*60*60*1000);return exp.toUTCString();};/**
  * Created by otherlite on 2016/3/15.
  */var cookie={getAllCookie:function getAllCookie(){// 获取所有cookie
-if(!document.cookie)return{};var cookies=document.cookie.split('; '),result={};var _iteratorNormalCompletion=true;var _didIteratorError=false;var _iteratorError=undefined;try{for(var _iterator=(0,_getIterator3.default)(cookies),_step;!(_iteratorNormalCompletion=(_step=_iterator.next()).done);_iteratorNormalCompletion=true){var _cookie=_step.value;var index=_cookie.indexOf('=');result[decodeURIComponent(_cookie.substr(0,index))]=decodeURIComponent(_cookie.substr(index+1));}}catch(err){_didIteratorError=true;_iteratorError=err;}finally{try{if(!_iteratorNormalCompletion&&_iterator.return){_iterator.return();}}finally{if(_didIteratorError){throw _iteratorError;}}}return result;},// 获取指定cookie
+if(!document.cookie)return{};var cookies=document.cookie.split('; ');var result={};var _iteratorNormalCompletion=true;var _didIteratorError=false;var _iteratorError=undefined;try{for(var _iterator=(0,_getIterator3.default)(cookies),_step;!(_iteratorNormalCompletion=(_step=_iterator.next()).done);_iteratorNormalCompletion=true){var _cookie=_step.value;var index=_cookie.indexOf('=');result[decodeURIComponent(_cookie.substr(0,index))]=decodeURIComponent(_cookie.substr(index+1));}}catch(err){_didIteratorError=true;_iteratorError=err;}finally{try{if(!_iteratorNormalCompletion&&_iterator.return){_iterator.return();}}finally{if(_didIteratorError){throw _iteratorError;}}}return result;},// 获取指定cookie
 getCookie:function getCookie(key,opt){// 获取指定cookie
 var _config$opt=(0,_extends3.default)({},_config.config,opt),affix=_config$opt.affix;return cookie.getAllCookie()[''+key+affix];},// 设置cookie
-setCookie:function setCookie(key,value,opt){var _config$opt2=(0,_extends3.default)({},_config.config,opt),affix=_config$opt2.affix,domain=_config$opt2.domain,path=_config$opt2.path,exp_day=_config$opt2.exp_day;var str=''+key+affix+'='+encodeURIComponent(value)+';path='+path+';expires='+expiresTime(exp_day)+';';if(domain!='localhost'){str+='domain='+domain+';';}document.cookie=str;},// 删除cookie
-delCookie:function delCookie(key,opt){var _config$opt3=(0,_extends3.default)({},_config.config,opt),affix=_config$opt3.affix,domain=_config$opt3.domain,path=_config$opt3.path,exp_day=_config$opt3.exp_day;var str=''+key+affix+'=0;expires='+new Date(0).toUTCString()+';path='+path+';domain='+domain+';';document.cookie=str;}};var getCookie=exports.getCookie=cookie.getCookie;var setCookie=exports.setCookie=cookie.setCookie;var delCookie=exports.delCookie=cookie.delCookie;exports.default=cookie;
+setCookie:function setCookie(key,value,opt){var _config$opt2=(0,_extends3.default)({},_config.config,opt),affix=_config$opt2.affix,domain=_config$opt2.domain,path=_config$opt2.path,exp_day=_config$opt2.exp_day;var str=''+key+affix+'='+encodeURIComponent(value)+';path='+path+';expires='+expiresTime(exp_day)+';';if(domain!=='localhost'){str+='domain='+domain+';';}document.cookie=str;},// 删除cookie
+delCookie:function delCookie(key,opt){var _config$opt3=(0,_extends3.default)({},_config.config,opt),affix=_config$opt3.affix,domain=_config$opt3.domain,path=_config$opt3.path;var str=''+key+affix+'=0;expires='+new Date(0).toUTCString()+';path='+path+';domain='+domain+';';document.cookie=str;}};var getCookie=exports.getCookie=cookie.getCookie;var setCookie=exports.setCookie=cookie.setCookie;var delCookie=exports.delCookie=cookie.delCookie;exports.default=cookie;
 
 /***/ }),
 /* 49 */
@@ -834,7 +834,7 @@ delCookie:function delCookie(key,opt){var _config$opt3=(0,_extends3.default)({},
 "use strict";
 Object.defineProperty(exports,"__esModule",{value:true});/**
  * Created by otherlite on 2016/6/15.
- */var error={bugInit:function bugInit(data){window.bughd&&bughd('user',data);},bug:function bug(type,error,data){// 发送异常
+ *//* global bughd */var error={bugInit:function bugInit(data){window.bughd&&bughd('user',data);},bug:function bug(type,error,data){// 发送异常
 window.bughd&&bughd('notify',type,error,data);}};var bug=exports.bug=error.bug;var bugInit=exports.bugInit=error.bugInit;exports.default=error;
 
 /***/ }),
@@ -842,7 +842,7 @@ window.bughd&&bughd('notify',type,error,data);}};var bug=exports.bug=error.bug;v
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var __WEBPACK_AMD_DEFINE_RESULT__;var _typeof2=__webpack_require__(18);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/*
+var __WEBPACK_AMD_DEFINE_RESULT__;var _typeof2=__webpack_require__(18);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* eslint-disable *//*
  * JavaScript MD5
  * https://github.com/blueimp/JavaScript-MD5
  *
@@ -891,7 +891,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;var _typeof2=__webpack_require__(18);var _type
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var _typeof2=__webpack_require__(18);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* global PushStream WebSocketWrapper EventSourceWrapper EventSource *//* jshint evil: true, plusplus: false, regexp: false *//**
+var _typeof2=__webpack_require__(18);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* eslint-disable *//* global PushStream WebSocketWrapper EventSourceWrapper EventSource *//* jshint evil: true, plusplus: false, regexp: false *//**
 The MIT License (MIT)
 
 Copyright (c) 2010-2014 Wandenberg Peixoto <wandenberg@gmail.com>, Rogério Carvalho Schneider <stockrt@gmail.com>

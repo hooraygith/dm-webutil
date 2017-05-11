@@ -14,8 +14,8 @@ const cookie = {
   getAllCookie () { // 获取所有cookie
     if (!document.cookie) return {}
 
-    let cookies = document.cookie.split('; '),
-      result = {}
+    let cookies = document.cookie.split('; ')
+    let result = {}
 
     for (let cookie of cookies) {
       let index = cookie.indexOf('=')
@@ -38,14 +38,14 @@ const cookie = {
       ...opt
     }
     let str = `${key}${affix}=${encodeURIComponent(value)};path=${path};expires=${expiresTime(exp_day)};`
-    if (domain != 'localhost') {
+    if (domain !== 'localhost') {
       str += `domain=${domain};`
     }
     document.cookie = str
   },
     // 删除cookie
   delCookie (key, opt) {
-    let {affix, domain, path, exp_day} = {
+    let {affix, domain, path} = {
       ...config,
       ...opt
     }

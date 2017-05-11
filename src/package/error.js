@@ -2,6 +2,8 @@
  * Created by otherlite on 2016/6/15.
  */
 
+/* global bughd */
+
 const error = {
   bugInit (data) {
     window.bughd && bughd('user', data)

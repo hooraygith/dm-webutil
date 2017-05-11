@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* global PushStream WebSocketWrapper EventSourceWrapper EventSource */
 /* jshint evil: true, plusplus: false, regexp: false */
 /**

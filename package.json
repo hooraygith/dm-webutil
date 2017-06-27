@@ -1,6 +1,6 @@
 {
   "name": "dm-webutil",
-  "version": "0.1.6",
+  "version": "1.0.0-0",
   "description": "点米.前端.便捷工具库",
   "main": "dist/dmUtil.js",
   "keywords": [
@@ -11,9 +11,11 @@
   "scripts": {
     "precommit": "dm lint --commit"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "0.15.2"
+  },
   "devDependencies": {
-    "dm-devdep": "0.1.16"
+    "dm-devdep": "vue2"
   },
   "license": "MIT",
   "homepage": "",

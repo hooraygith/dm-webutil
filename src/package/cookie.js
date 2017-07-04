@@ -2,8 +2,6 @@
  * Created by otherlite on 2016/3/15.
  */
 
-import {config} from './config'
-
 let expiresTime = (day) => { // 获取过期时间
   var exp = new Date()
   exp.setTime(exp.getTime() + day * 24 * 60 * 60 * 1000)
@@ -26,7 +24,7 @@ const cookie = {
     // 获取指定cookie
   getCookie (key, opt) { // 获取指定cookie
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     return cookie.getAllCookie()[`${key}${affix}`]
@@ -34,7 +32,7 @@ const cookie = {
     // 设置cookie
   setCookie (key, value, opt) {
     let {affix, domain, path, exp_day} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     let str = `${key}${affix}=${encodeURIComponent(value)};path=${path};expires=${expiresTime(exp_day)};`
@@ -46,7 +44,7 @@ const cookie = {
     // 删除cookie
   delCookie (key, opt) {
     let {affix, domain, path} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     let str = `${key}${affix}=0;expires=${new Date(0).toUTCString()};path=${path};domain=${domain};`

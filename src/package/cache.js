@@ -2,15 +2,13 @@
  * Created by otherlite on 2016/5/27.
  *
  */
-import {config} from './config'
-
 const cache = {
     /**
      * 设置缓存
      */
   setCache (key, value, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     localStorage.setItem(`${key}${affix}`, value)
@@ -20,7 +18,7 @@ const cache = {
      */
   getCache (key, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     return localStorage.getItem(`${key}${affix}`)
@@ -28,9 +26,9 @@ const cache = {
     /**
      * 移除缓存
      */
-  removeCache (key, opt) {
+  delCache (key, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     localStorage.removeItem(`${key}${affix}`)
@@ -45,7 +43,7 @@ const cache = {
 
 export let setCache = cache.setCache
 export let getCache = cache.getCache
-export let removeCache = cache.removeCache
+export let delCache = cache.delCache
 export let clearCache = cache.clearCache
 
 export default cache

@@ -2,15 +2,13 @@
  * Created by otherlite on 2016/5/27.
  *
  */
-import {config} from './config'
-
 const session = {
     /**
      * 设置缓存
      */
   setSession (key, value, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     sessionStorage.setItem(`${key}${affix}`, value)
@@ -20,7 +18,7 @@ const session = {
      */
   getSession (key, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     return sessionStorage.getItem(`${key}${affix}`)
@@ -28,9 +26,9 @@ const session = {
     /**
      * 移除缓存
      */
-  removeSession (key, opt) {
+  delSession (key, opt) {
     let {affix} = {
-      ...config,
+      ...this.config,
       ...opt
     }
     sessionStorage.removeItem(`${key}${affix}`)
@@ -45,7 +43,7 @@ const session = {
 
 export let setSession = session.setSession
 export let getSession = session.getSession
-export let removeSession = session.removeSession
+export let delSession = session.delSession
 export let clearSession = session.clearSession
 
 export default session

@@ -1,6 +1,6 @@
 {
   "name": "dm-webutil",
-  "version": "1.0.0-6",
+  "version": "1.0.0-7",
   "description": "点米.前端.便捷工具库",
   "main": "dist/pd/dmUtil.js",
   "keywords": [

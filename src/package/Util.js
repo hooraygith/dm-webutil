@@ -28,11 +28,11 @@ class Util {
       setSession,
       getSession,
       delSession,
-      clearSession,
-      createInstance (config) {
-        return new Util(Object.assign(this.config, config))
-      }
+      clearSession
     })
+  }
+  createInstance (config) {
+    return new Util(Object.assign(this.config, config))
   }
 }
 

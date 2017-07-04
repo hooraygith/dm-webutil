@@ -1,5 +1,7 @@
 import util from '../src/index'
 
+console.log(util)
+
 const webutil = util.createInstance({
   affix: '-dmwebutiltest'
 })

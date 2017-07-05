@@ -1,6 +1,4 @@
 - 入门
   - [简介](/introduction)
   - [快速开始](/quick-start)
-- 组件
-  - [富文本编辑器](/richEditor)
-  - [demo](/markdowndemo)
+  - [使用](/howtouse)

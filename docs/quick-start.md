@@ -1,15 +1,14 @@
 ## 安装
 
 ```shell
-npm install dm-ui@vue2
+npm install dm-webutil@vue2
 ```
 
 ## 使用
 
 ```js
-import vue from 'vue'
-import dmui from 'dm-ui'
+import util from 'dm-webutil'
 
-vue.use(dmui)
+util.setcookie('a',123)
 ```
 

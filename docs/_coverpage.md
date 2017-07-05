@@ -1,13 +1,9 @@
 <!-- ![logo](_media/icon.svg) -->
 
-# DMUI
-
-> 基于iview2的组件库
-
--  echarts+richEditor etc.
+# dm-webutil
 
 
-[GitHub](https://github.com/DianmiFE/dm-ui/tree/vue2)
+[GitHub](https://github.com/DianmiFE/dm-webutil)
 [快速开始](/quick-start)
 
 <!-- 背景图片 -->

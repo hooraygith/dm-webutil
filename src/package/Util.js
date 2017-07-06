@@ -32,7 +32,7 @@ class Util {
     })
   }
   createInstance (config) {
-    return new Util(Object.assign(this.config, config))
+    return new Util(Object.assign({}, this.config, config))
   }
 }
 

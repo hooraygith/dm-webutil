@@ -23,7 +23,9 @@ const cookie = {
     },
     // 获取指定cookie
     getCookie(key, opt) { // 获取指定cookie
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
@@ -31,7 +33,12 @@ const cookie = {
     },
     // 设置cookie
     setCookie(key, value, opt) {
-        let {affix, domain, path, exp_day} = {
+        let {
+            affix,
+            domain,
+            path,
+            exp_day
+        } = {
             ...this.config,
             ...opt
         }
@@ -43,7 +50,11 @@ const cookie = {
     },
     // 删除cookie
     delCookie(key, opt) {
-        let {affix, domain, path} = {
+        let {
+            affix,
+            domain,
+            path
+        } = {
             ...this.config,
             ...opt
         }

@@ -3,29 +3,18 @@ import util from '../src/index'
 console.log(util)
 
 const webutil = util.createInstance({
-  affix: '-dmwebutiltest'
+    affix: '-dmwebutiltest'
 })
-
-// bugHD
-webutil.bug()
-webutil.bugInit()
-
-window.bughd = (...opt) => {
-  console.dir(opt)
-}
-
-webutil.bug('123')
-webutil.bugInit('type', 'error', 'data')
 
 // md5
 console.log(webutil.md5('aaaaa'))
 
 // base64
-let base64Str = '我是base64字符串'
+let base64Str = `{str:'我是base64字符串'}`
 console.log(webutil.encode(base64Str))
 console.log(webutil.decode(webutil.encode(base64Str)))
 console.log(webutil.decodeJson(webutil.encode({
-  a: '123'
+    a: '123'
 })))
 
 // cookie

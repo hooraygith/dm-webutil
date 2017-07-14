@@ -1,24 +1,3 @@
-## bugInit
-- 类型: `Function`
-
-- 参数:   
-  - (Object)[必选]data: 用户信息
-
-- 用法:    
-
-初始化bugHd，传入用户信息，例如 `Util.bugInit({a:1,b:1})`
-
-## bug
-- 类型: `Function`
-
-- 参数:   
-  - (String)[必选]type: 日志类型
-  - (Object)[可选]error: 日志数据
-  - (Object)[可选]data: 其它配置
-
-- 用法:    
-
-记录一条日志到bugHd里，方便以后追踪，例如 `Util.bug('1004',{data:'服务器繁忙'})`
 
 ## md5
 - 类型: `Function`
@@ -48,7 +27,20 @@ base64编码，返回编码后的字符串，例如 `Util.encode({a:1})`
 
 - 用法:    
 
-base64解码，返回解码后的字符串或对象，例如 `Util.decode('%7B%22token%22%3A%22pae8gz36f5wx9qm9dwt6oytjpxa35ape%22%2C%22status%22%3A0%7D')`
+base64解码，返回解码后的结果，例如 `Util.decode('e3N0cjon5oiR5pivYmFzZTY05a2X56ym5LiyJ30=')`
+结果为`{str:'我是base64字符串'}`
+
+
+## decodeJson
+- 类型: `Function`
+
+- 参数:   
+  - (String)[必选]str: 要base64解码的字符串
+
+- 用法:    
+
+base64解码，返回解码后的json，例如 `Util.decode('e3N0cjon5oiR5pivYmFzZTY05a2X56ym5LiyJ30=')`
+结果为`[Object object]`
 
 ## getCookie
 - 类型: `Function`

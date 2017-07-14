@@ -7,7 +7,9 @@ const session = {
      * 设置缓存
      */
     setSession(key, value, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
@@ -17,7 +19,9 @@ const session = {
      * 获取缓存
      */
     getSession(key, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
@@ -27,7 +31,9 @@ const session = {
      * 移除缓存
      */
     delSession(key, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }

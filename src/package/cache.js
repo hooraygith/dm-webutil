@@ -7,7 +7,9 @@ const cache = {
      * 设置缓存
      */
     setCache(key, value, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
@@ -17,7 +19,9 @@ const cache = {
      * 获取缓存
      */
     getCache(key, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
@@ -27,7 +31,9 @@ const cache = {
      * 移除缓存
      */
     delCache(key, opt) {
-        let {affix} = {
+        let {
+            affix
+        } = {
             ...this.config,
             ...opt
         }
